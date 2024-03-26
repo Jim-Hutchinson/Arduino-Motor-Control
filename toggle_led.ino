@@ -7,7 +7,7 @@ void setup() {
 
 void loop() {
   if (!digitalRead(buttonPin)) {
-    digitalWrite(LED_BUILTIN, !digitalRead(13));
+    digitalWrite(13, !digitalRead(13));
     delay(500);
   }
 }
