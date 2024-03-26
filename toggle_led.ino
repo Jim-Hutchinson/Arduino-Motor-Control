@@ -1,13 +1,14 @@
 const byte buttonPin = 2; // button between pin2 and ground
+const byte LEDpin = 13; // pin that controls the LED
 
 void setup() {
   pinMode(buttonPin, INPUT_PULLUP);
-  pinMode(13, OUTPUT);
+  pinMode(LEDpin, OUTPUT);
 }
 
 void loop() {
   if (!digitalRead(buttonPin)) {
-    digitalWrite(13, !digitalRead(13));
+    digitalWrite(LEDpin, !digitalRead(13));
     delay(500);
   }
 }
